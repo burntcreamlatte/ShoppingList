@@ -11,6 +11,8 @@ import CoreData
 
 class EntryListTableViewController: UITableViewController {
 
+    // MARK: Lifecycle Methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,8 +23,9 @@ class EntryListTableViewController: UITableViewController {
     
     @IBAction func addNewEntryButtonTapped(_ sender: Any) {
         let alertController = UIAlertController(title: "Add Item", message: "Please add an item to your shopping list", preferredStyle: .alert)
+        //would like to see how to guard against empty values here where the button does not register
         let addEntryAction = UIAlertAction(title: "Add", style: .default) { (action) in
-            guard let newEntry = alertController.textFields?[0].text else { return }
+            guard let newEntry = alertController.textFields?[0].text, newEntry != "" else { return }
             EntryController.sharedInstance.addNew(entryWithBody: newEntry)
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)

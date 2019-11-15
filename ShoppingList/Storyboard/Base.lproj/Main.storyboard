@@ -28,10 +28,11 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M3p-p2-Spe">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M3p-p2-Spe">
                                             <rect key="frame" x="366" y="24.5" width="30" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="M3p-p2-Spe" secondAttribute="height" multiplier="1:1" id="T8S-AX-wrq"/>
+                                                <constraint firstAttribute="width" constant="30" id="yjL-47-oAW"/>
                                             </constraints>
                                             <connections>
                                                 <action selector="buttonTapped:" destination="X7s-D6-4vT" eventType="touchUpInside" id="EqG-xe-9dG"/>

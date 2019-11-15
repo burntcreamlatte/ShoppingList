@@ -20,8 +20,7 @@ class EntryController {
     
     init() {
         let fetchRequest: NSFetchRequest<Entry> = Entry.fetchRequest()
-        //we aren't implementing checked and incompleted sections
-        
+        //we aren't implementing checked and incompleted sections, but could be a nice feature to add later with sort descriptors
         let isCheckedSortDescriptor = NSSortDescriptor(key: "isChecked", ascending: true)
         
         fetchRequest.sortDescriptors = [isCheckedSortDescriptor]
