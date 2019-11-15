@@ -13,7 +13,7 @@ class EntryListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        EntryController.sharedInstance.fetchedResultsController.delegate.self
+        //EntryController.sharedInstance.fetchedResultsController.delegate.self
     }
 
     // MARK: - Table view data source

@@ -6,7 +6,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Entry List Table View Controller-->
+        <!--Shopping List-->
         <scene sceneID="4OF-1P-92m">
             <objects>
                 <tableViewController id="FxR-6r-rcl" customClass="EntryListTableViewController" customModule="ShoppingList" customModuleProvider="target" sceneMemberID="viewController">
@@ -33,6 +33,9 @@
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="M3p-p2-Spe" secondAttribute="height" multiplier="1:1" id="T8S-AX-wrq"/>
                                             </constraints>
+                                            <connections>
+                                                <action selector="buttonTapped:" destination="X7s-D6-4vT" eventType="touchUpInside" id="EqG-xe-9dG"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -42,6 +45,10 @@
                                         <constraint firstItem="M3p-p2-Spe" firstAttribute="centerY" secondItem="19i-EH-yL9" secondAttribute="centerY" id="vi7-gg-yHH"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="checkedButton" destination="M3p-p2-Spe" id="ynz-tL-KhE"/>
+                                    <outlet property="entryBodyLabel" destination="jcY-Yq-ToA" id="Zeq-q9-VdT"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -49,7 +56,7 @@
                             <outlet property="delegate" destination="FxR-6r-rcl" id="sz6-Pc-a2U"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="uAT-9R-0tc">
+                    <navigationItem key="navigationItem" title="Shopping List" id="uAT-9R-0tc">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="8ZX-JI-efJ"/>
                     </navigationItem>
                 </tableViewController>
