@@ -21,6 +21,10 @@ class EntryController {
     init() {
         let fetchRequest: NSFetchRequest<Entry> = Entry.fetchRequest()
         //we aren't implementing checked and incompleted sections
+        
+        let isCheckedSortDescriptor = NSSortDescriptor(key: "isChecked", ascending: true)
+        
+        fetchRequest.sortDescriptors = [isCheckedSortDescriptor]
         let resultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: CoreDataStack.context, sectionNameKeyPath: nil, cacheName: nil)
         fetchedResultsController = resultsController
         do {
