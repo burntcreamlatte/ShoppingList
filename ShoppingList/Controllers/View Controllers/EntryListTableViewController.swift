@@ -7,13 +7,14 @@
 //
 
 import UIKit
+import CoreData
 
 class EntryListTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        EntryController.sharedInstance.fetchedResultsController.delegate.self
+        EntryController.sharedInstance.fetchedResultsController.delegate = self
     }
 
     // MARK: - Actions
@@ -35,7 +36,7 @@ class EntryListTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return EntryController.sharedInstance.fetchedResultsController.sections?.count ?? 0
+        return EntryController.sharedInstance.fetchedResultsController.sections?[section].numberOfObjects ?? 0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
